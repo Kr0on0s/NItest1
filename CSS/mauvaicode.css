@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
+body {
+    padding: 0 2%;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: orange;
+}
+
+nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff7f00;
+    position: sticky;
+    top: 0;
+    width: 98%;
+    padding: 0 1% 0 1%;
+    margin-left: 10%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0;
+}
+
+    nav .profile {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+        nav .profile img {
+            width: 100px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        nav .profile h1 {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        nav .profile a {
+            text-decoration: none;
+            color: Blue;
+            display: flex;
+            align-items: center;
+        }
+
+    nav ul {
+        padding-left: 0;
+        display: flex;
+        list-style-type: none;
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+
+        nav ul li {
+            float: left;
+            text-align: center;
+            margin-left: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid black;
+        }
+
+        nav ul a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            border-bottom: 2px solid transparent;
+            padding: 10px 0px;
+        }
+
+            nav ul a:hover {
+                color: orange;
+                border-bottom: 2px solid gold;
+            }
+
+.sous {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    box-shadow: Opx 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+}
+
+nav > ul li:hover .sous {
+    display: block;
+}
+
+.sous li {
+    margin-left: 0;
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a {
+    padding: 5px;
+}
+
+    .sous a:hover {
+        border-bottom: none;
+        background-color: RGBa(200,200,200,0.5);
+    }
+
+
+.page-content {
+    margin-right: 10%;
+    padding: 1%;
+    background-color: blue;
+}
+
+    .page-content header {
+        margin-top: 2%;
+        max-width: 80%;
+    }
+
+        .page-content header h1 {
+            margin: 0;
+            margin-left: 100%;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 5vw;
+        }
+
+        .page-content header p {
+            color: cyan;
+        }
+
+    .page-content h2 {
+        margin: 0;
+        margin-right: 100%;
+        text-transform: uppercase;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 4vw;
+        color: blue;
+    }
+
+    .page-content article {
+        margin-top: 1%;
+        margin-bottom: 0;
+        line-height: 30px;
+        color: #818181;
+    }
+
+    .page-content button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        padding-left: 0;
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #818181;
+        cursor: pointer;
+    }
+
+        .page-content button:hover {
+            color: #818181;
+            border-bottom-color: #000;
+        }
+
+    .page-content .presentation-image {
+        margin-top: 0;
+        z-index: 1000;
+    }
+
+        .page-content .presentation-image img {
+            width: 100%;
+            max-height: 500px;
+            transform: rotate(-20deg);
+            z-index: 1000;
+        }
+
+            .page-content .presentation-image img:hover {
+                filter: brightness(520%);
+                z-index: 1000;
+            }
+
+.maladies-section {
+    margin-top: 3%;
+}
+
+    .maladies-section h1 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 3vw;
+    }
+
+        nav:hover, .page-content article:hover, .maladies-section h1:hover, h4:hover {
+            background-color: blue;
+            color: blue;
+        }
+
+.maladies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maladie {
+    margin: 0;
+    padding: 0;
+    max-width: 150px;
+}
+
+    .maladie h4 {
+        margin: 0;
+    }
+
+.description {
+    font-size: 100%;
+}
+
+footer {
+    bottom: 0;
+    position: sticky;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ff7f00;
+    color: white;
+    padding: 0;
+}
+
+    footer .colonne {
+        display: flex;
+        margin-top: 1%;
+        align-items: center;
+    }
+
+    .blabla, footer p {
+        color: #ff7f00;
+    }
+
+    footer p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    footer .colonne1 h3 {
+        align-content: right;
+    }
+
+    footer .colonne2 {
+        margin-left: 10px;
+    }
+
+        footer .colonne2 article {
+            font-size: 12px;
+            color: gold;
+            cursor: pointer;
+        }
+
+            footer .colonne2 article:hover {
+                color: #ff7f00;
+            }
+
+
+@media screen and (min-width:700px) {
+    nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:699px) {
+    nav .profile {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .page-content header {
+        margin-top: 10%;
+        max-width: 100%
+    }
+
+    .competences-section {
+        margin-top: 15%;
+    }
+
+        .competences-section h1 {
+            font-size: 1.5em;
+        }
+
+    .competence {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    footer {
+        justify-content: flex-start;
+        padding-left: 5px;
+    }
+
+        footer .colonne {
+            width: 80%;
+            margin: 0;
+        }
+}

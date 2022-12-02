@@ -1,0 +1,318 @@
+*{
+	margin:0;
+}
+
+html { 
+	background: url(../image/fondsf.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body{
+	background-color: transparent!important;
+}
+
+section.paragraphe {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+body *:not(#futuristic_cover){
+	z-index: 1;
+}
+
+h1.titre {
+	font-size: 30px;
+}
+
+nav{
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.861);
+	height: fit-content;
+	color: #EEE;
+	font-family: cyberpunk-font;
+	text-transform: uppercase;
+}
+nav>ul{
+	list-style-type: none; /*Pour se débarrasser des puces*/
+	padding: 0;
+	margin: 0;
+	height: fit-content!important;
+    display: block;
+}
+nav ul li{
+	border: 0px solid black;
+	width: 100px;
+	/* height: 30px; */
+	line-height: 30px; /*Pour centrer verticalement line-height (hauteur de ligne) doit avoir la même valeur que height (hauteur)*/
+	text-align: center;
+
+}
+nav>ul>li>a{
+	display: block;
+
+	text-decoration: none; /*Pour enlever le soulignement de l'hyperlien*/
+	transition: .3s;
+	font-weight: 800;
+	font-size: 17px;
+	padding: 20px;
+}
+nav ul li ul{
+	display: none;
+}
+nav ul li:hover ul{
+	display: block;
+}
+	nav ul li a:hover {
+		color: #ffffff;
+	}
+.paragraphe {
+	width: 90%;
+	border: 0px solid grey;
+	border-radius: 7px;
+	padding: 40px;
+	margin: 80px auto 0px auto;
+	box-shadow: 5px 5px 5px #0000007d;
+	background-color: #000000cf;
+	color: white;
+	font-family: 'cyberpunk-font';
+	font-size: 18px;
+	max-width: 60%;
+	backdrop-filter: blur(2px);
+}
+
+#conteneur_de_liste_1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+	
+}
+.objets_de_liste_1, .objets_de_liste_2{
+	border: 0px solid black;
+	list-style-type: none;
+	width: fit-content;
+	height: fit-content;
+	line-height: 30px; /*Pour centrer verticalement line-height (hauteur de ligne) doit avoir la même valeur que height (hauteur)*/
+	text-align: center;
+	
+    display: block;
+}
+
+.objets_de_liste_2{
+	width: 100%;
+}
+
+.lien_1, .lien_2 {
+	border: 0px solid green;
+	display: block;
+	text-decoration: none; /*Pour enlever le soulignement de l'hyperlien*/
+	color: #19c7fb;
+}
+.conteneur_de_liste_2{
+	position: absolute;
+    padding: 0 20px 15px 20px;
+    background-color: #000000cf;
+}
+.objets_de_liste_2{
+	float: none;
+}
+
+.objets_de_liste_2 a{
+	text-align: left;
+}
+
+@media screen and (max-width: 500px){
+
+	#conteneur_de_liste_1{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-content: center;
+		justify-content: center;
+	}
+}
+
+.lien_surligne{
+	text-decoration: underline;
+}
+
+@font-face { 
+	font-family: cyberpunk-font; 
+	src: url('../font/FontsFree-Net-Proxima-Nova-ExCn-Bold.otf'); 
+}
+
+article iframe{
+	margin-bottom: 40px;
+}
+
+.paragraphe-centre{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emoji-section{
+	font-size: 60px;
+	display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    margin-bottom: 20px;
+    border: 1px solid currentColor;
+}
+
+#logoJeuxVideos{
+	background: #6200ff94;
+}
+
+#logoCinema{
+	background: #00ffa294;
+}
+
+#logoMusique{
+	background: rgba(0, 0, 0, 0.337);
+}
+
+@media screen and (max-width: 900px){
+	iframe {
+		width: inherit;
+	}
+}
+
+.paragraphe-contact{
+	background: rgba(0, 0, 0, 0.954);
+}
+
+.btn-primary {
+    background-color: #173f42!important;
+	border-color: #1c2634ca!important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #173f42a8!important;
+}
+
+.tableau-style{
+	border-collapse: collapse;
+	min-width: 500px;
+	width: auto;
+	box-shadow: 0 5px 50px black;
+	cursor: pointer;
+	margin: 100px auto;
+	border: 2px solid #000000eb;
+	backdrop-filter: blur(12px);
+	font-family: cyberpunk-font;
+}
+
+thead tr {
+    background-color: #101010b6;
+    color: white;
+    text-align: left;
+}
+
+.tableau-style th{
+	line-height: 25px;
+}
+
+th, td{
+	padding: 56px 106px;
+	text-align: center;
+}
+
+
+tbody, tr, td, th{
+	border: 1px solid #6200ff;
+}
+
+tbody tr:nth-child(even){
+	background-color: #88656543;
+}
+
+tbody tr:last-of-type{
+	border-bottom: 2px solid #000000eb;
+}
+
+tr{
+	color: #ffffff;
+	font-size: 15px;
+}
+
+p{
+	font-size: 20px;
+}
+
+@media (max-width: 1450px){
+		th, td {
+			padding: 56px 55px;
+				}
+}
+
+@media (max-width: 1050px){
+		th, td {
+			padding: 56px 13px;
+				}
+}
+
+@media (max-width: 700px){
+	th, td {
+		padding: 56px 0px;
+		width: 70px;
+	}
+	tr{
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 550px){
+	th, td {
+		padding: 56px 0px;
+		width: 0px;
+	}
+	tr{
+		font-size: 11px;
+	}
+	.tableau-style{
+		width: 90%;
+		min-width: 0!important;
+	}
+}
+
+.tableau-fusion{
+	border-collapse: collapse;
+	min-width: 500px;
+	width: auto;
+	box-shadow: 0 5px 50px black;
+	cursor: pointer;
+	margin: 100px auto;
+	border: 2px solid #000000eb;
+	backdrop-filter: blur(12px);
+	font-family: cyberpunk-font;
+}
+
+@media (max-width: 550px){
+	th, td {
+		padding: 56px 0px;
+		width: 0px;
+	}
+	tr{
+		font-size: 11px;
+	}
+	.tableau-fusion{
+		width: 90%;
+		min-width: 0!important;
+	}
+}
