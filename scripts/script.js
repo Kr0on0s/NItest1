@@ -2,23 +2,18 @@ const cards = document.querySelectorAll(".card");
 
 let matched = 0;
 let cardOne, cardTwo;
+let cardOneImg, cardTwoImg;
 let disableDeck = false;
-let vih = `images/img-1.png`
-let hepatite_b = `images/img-2.png`
-let hepatite_c = `images/img-3.png`
-let herpes = `images/img-4.png`
-let blennorragie_gonococcique = `images/img-5.png`
-let chlamydia = `images/img-6.png`
-let syphilis = `images/img-7.png`
-let papillomavirus = `images/img-8.png`
-let map = new Map()
-map.set("herpes", "texteaffiche")
-map.set("vih", "texteaffiche")
-map.set("chlamydia", "texteaffiche")
-map.set("herpes", "texteaffiche")
-map.set("herpes", "texteaffiche")
 
 
+function activateCheats() {
+    document.body.style.backgroundImage = "url('images/cheatBackground.png')";
+
+    var audio = new Audio('audio/pling.mp3');
+    audio.play();
+
+    alert("cheats activated");
+}
 
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
@@ -29,10 +24,8 @@ function flipCard({target: clickedCard}) {
         cardTwo = clickedCard;
         // recup le virus de l'image et appeler map.get("hepatite_c")
         disableDeck = true;
-        let cardOneImg = cardOne.querySelector(".back-view img").src;
-        let idc1 = cardOne.querySelector(".back-view img").id;
-        map.get(idc1);
 
+        cardOneImg = cardOne.querySelector(".back-view img").src;
         cardTwoImg = cardTwo.querySelector(".back-view img").src;
         matchCards(cardOneImg, cardTwoImg);
     }
@@ -41,8 +34,40 @@ function flipCard({target: clickedCard}) {
 function matchCards(img1, img2) {
     if(img1 === img2) {
         matched++;
+        var verif = cardTwoImg.indexOf("img-1")
+        if (verif !== -1){
+            setTimeout(() => {popup_vih(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-2")
+        if (verif !== -1){
+            setTimeout(() => {popup_hepatite_b(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-3")
+        if (verif !== -1){
+            setTimeout(() => {popup_hepatite_c(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-4")
+        if (verif !== -1){
+            setTimeout(() => {popup_herpes(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-5")
+        if (verif !== -1){
+            setTimeout(() => {popup_bg(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-6")
+        if (verif !== -1){
+            setTimeout(() => {popup_chlamydia(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-7")
+        if (verif !== -1){
+            setTimeout(() => {popup_syphilis(); }, 500);
+        }
+        var verif = cardTwoImg.indexOf("img-8")
+        if (verif !== -1){
+            setTimeout(() => {popup_papillomavirus(); }, 500);
+        }
+
         if(matched == 8) {
-            popup_win()
             setTimeout(() => {
                 return shuffleCard();
             }, 1000);
@@ -72,7 +97,6 @@ function shuffleCard() {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
     arr.sort(() => Math.random() > 0.5 ? 1 : -1);
     cards.forEach((card, i) => {
-        let children = card.children;
         card.classList.remove("flip");
         let imgTag = card.querySelector(".back-view img");
         imgTag.src = `images/img-${arr[i]}.png`;
@@ -81,24 +105,80 @@ function shuffleCard() {
 }
 
 // Get the modal
-var modal = document.getElementById("win");
-;
+var modal2 = document.getElementById("vih");
+var modal3 = document.getElementById("hepatite_b")
+var modal4 = document.getElementById("hepatite_c")
+var modal5 = document.getElementById("herpes")
+var modal6 = document.getElementById("bg")
+var modal7 = document.getElementById("chlamydia")
+var modal8 = document.getElementById("syphilis")
+var modal9 = document.getElementById("papillomavirus")
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-function popup_win() {
-    modal.style.display = "block";
+function popup_vih() {
+    modal2.style.display = "block";
 }
-span.onclick = function() {
-    modal.style.display = "none";
+
+function popup_hepatite_b(){
+    modal3.style.display = "block";
+}
+
+function popup_hepatite_c(){
+    modal4.style.display = "block";
+}
+
+function popup_herpes(){
+    modal5.style.display = "block";
+}
+
+function popup_bg(){
+    modal6.style.display = "block"
+}
+
+function popup_chlamydia(){
+    modal7.style.display = "block"
+}
+
+function popup_syphilis(){
+    modal8.style.display = "block"
+}
+
+function popup_papillomavirus(){
+    modal9.style.display = "block"
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+    if (event.target == modal4) {
+        modal4.style.display = "none";
+    }
+    if (event.target == modal5) {
+        modal5.style.display = "none";
+    }
+    if (event.target == modal6) {
+        modal6.style.display = "none";
+    }
+    if (event.target == modal7) {
+        modal7.style.display = "none";
+    }
+    if (event.target == modal8) {
+        modal8.style.display = "none";
+    }
+    if (event.target == modal9) {
+        modal9.style.display = "none";
     }
 } 
+
+
+
+
+
+
 
 shuffleCard();
     
