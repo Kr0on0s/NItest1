@@ -1,14 +1,154 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
-    <title>SIte nuit de l'info</title>
-</head>
-<body>
-    <button id="btn" onclick="changeColor()">2Changer la couleur</button>
-    <script src="script.js"></script> 
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img" id="vih">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-2.png" alt="card-img" id="hepatiteb">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-3.png" alt="card-img" id="hepatitec">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img" id="herpes">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-5.png" alt="card-img" id="bgonococcique">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img" id="chlamydia">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-7.png" alt="card-img" id="syphilis">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-8.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-3.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-5.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-4.png" alt="card-img">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="win" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Bravo! vous avez gagné !!</p>
+      </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
 </html>
