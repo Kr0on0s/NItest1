@@ -1,24 +1,10 @@
 {
-  "name": "nitest1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name" : "my-application",
+  "version" : "1.0.0",
+  "dependencies" : {
+    "express" : "4.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kr0on0s/NItest1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kr0on0s/NItest1/issues"
-  },
-  "homepage": "https://github.com/Kr0on0s/NItest1#readme",
-  "dependencies": {
-    "express": "^4.18.2"
+  "scripts" : {
+    "start": "node server.js"
   }
 }
